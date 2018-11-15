@@ -39,19 +39,19 @@ cd Logs-Analysis
 <h2>Views</h2>
 
 <h2>three_articles</h2>
-<pre><code>select title, count(*) as views from articles , log  where articles.slug = substr(log.path, 10) group by title order by views DESC limit 3;</code></pre>
+<pre><code>create view three_articles as select title, count(*) as views from articles , log  where articles.slug = substr(log.path, 10) group by title order by views DESC limit 3;</code></pre>
 
 <h2>most_popular_article</h2>
-<pre><code>select name, count(*) as views from authors , articles , log where articles.slug = substr(log.path,10) and articles.author = authors.id group by name order by views DESC;</code></pre>
+<pre><code>create view most_popular_article as select name, count(*) as views from authors , articles , log where articles.slug = substr(log.path,10) and articles.author = authors.id group by name order by views DESC;</code></pre>
 
 <h2>re_d</h2>
-<pre><code>select date(time) as day, count(*) as total from log group by date(time);</code></pre>
+<pre><code>create view re_d as select date(time) as day, count(*) as total from log group by date(time);</code></pre>
 
 <h2>err_d</h2>
-<pre><code>select date(time) as day, count(*) as total from log where status != '200 OK' group by day;</code></pre>
+<pre><code>create view err_d as select date(time) as day, count(*) as total from log where status != '200 OK' group by day;</code></pre>
 
 <h2>err_r</h2>
-<pre><code>select re_d.day, round(100.0*err_d.total/re_d.total, 2) as error_rate from err_d, re_d where err_d.day = re_d.day;</code></pre>
+<pre><code>create view err_r as select re_d.day, round(100.0*err_d.total/re_d.total, 2) as error_rate from err_d, re_d where err_d.day = re_d.day;</code></pre>
 
 <h2>Run the project</h2>
 <pre><code>python project.py</code></pre>
