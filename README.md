@@ -8,7 +8,7 @@
 <h3>Vagrnt</h3>
 <h3>Virtual Machine</h3>
 <h3>Python 3</h3>
-<ul><li>FSND virtual machine <a href="https://github.com/udacity/fullstack-nanodegree-vm"></a> </li></ul>
+<h3>FSND virtual machine ( From this link 	https://github.com/udacity/fullstack-nanodegree-vm )</h3>
 
 <h2>Follow the instructions below</h2>
 <pre>
