@@ -5,10 +5,10 @@
 <p>logs analysis project</p>
 
 <h2>Operating requirements</h2>
-Vagrnt
-Virtual Machine
-Python
-FSND virtual machine
+<h3>Vagrnt</h3>
+<h3>Virtual Machine</h3>
+<h3>Python 3</h3>
+<ul><li>FSND virtual machine <a href="https://github.com/udacity/fullstack-nanodegree-vm"></a> </li></ul>
 
 <h2>Follow the instructions below</h2>
 <pre>
@@ -21,14 +21,14 @@ cd /vagrant
 git clone https://github.com/amjadzaghloul/Logs-Analysis.git
 cd Logs-Analysis
 		
-	</code>
+</code>
 
 </pre>
 
-<p>Download "newsdata" from this link https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdat a.zip
+<p>Download "newsdata" from this link https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 </p>
 
-<p>Move	the	“newsdata.sql”	to	your	project	folder	“Logs-Analysis”	</p>
+<p>Move	the	“newsdata.sql” to project folder “Logs-Analysis”	</p>
 
 <h2>load database</h2>
 <pre><code>psql -d news -f newsdata.sql </code></pre>
